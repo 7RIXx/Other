@@ -81,7 +81,8 @@ if args.choose is True:
 	choose = True
 	arNum += 1
 if args.help is True:
-	arNum += 1
+	print(help)
+	exit()
 if arNum > 1 or arNum < 1:
 	print(help)
 	exit()
