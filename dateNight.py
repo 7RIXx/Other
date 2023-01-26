@@ -95,21 +95,16 @@ if arNum > 1 or arNum < 1:
 
 def printer(string):
 
-	# tool for printing strings letter by letter, while contained within some given margins for aesthetic purposes
-	# margins solved via multi-line string formatting, this will follow the format the text is set in
+	# tool for printing strings letter by letter, for aesthetic purposes
+	# margins will follow those of the multi-line string
 	text = string
 	my_list = []
 	for letter in text:
-		
 		my_list.append(letter)
 		show_list = ''.join(my_list)
 		sleep(0.07)  #DEFAULT 0.04
-		cls()
+		os.system('clear')
 		print(show_list)
-		
-def cls():
-	os.system("clear")
-
 
 def add_it(contents):
 
@@ -127,7 +122,7 @@ def add_it(contents):
 	
 def remove_it(contents):
 
-	# take string from input and sparate into list items
+	# take string from input and separate into list items
 	contents = list(contents.replace(', ',',').split(','))
 
 	# if any of the passed items is in current list, remove it
@@ -148,7 +143,8 @@ def show_it():
 	# if list has items, print them, else don't
 	if len(the_list) > 0:
 		for item in the_list:
-			print(f'\n{item}\n')
+			print(f'\n{item}')
+		print('\n')
 	else:
 		print('\nNothing to show.\n')
 		print(help)
@@ -160,6 +156,7 @@ def choose_it():
 		num = len(the_list) - 1
 		ran = random.randint(0, num)
 		selection = the_list[ran]
+		os.system('clear')
 		print('''\n\n\n
 	
 	
@@ -187,10 +184,10 @@ _(___/_(___/_________/____/_____|__o_____/_|____/|_
 	Tonight is the night for fun! Tonight is the night for dating!
 	
 	
-	Tonight is the night for:
+		Tonight is the night for:
 	
 
-			{selection}!
+				{selection}!
 	
 		\n\n''')
 
@@ -248,11 +245,8 @@ CITATIONS
 
 2) https://stackoverflow.com/questions/18839957/argparseargumenterror-argument-h-help-conflicting-option-strings-h
 
-3) 
-
 '''
 
 
 ### END FOOTERS ###
-
 
